@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/generate.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/jquery-ui.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+  <title>Manipal Hallticket Generator</title>
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script src="script/plugin/jq.js"></script>
+  <script src="script/firebase-connect.js"></script>
+  <script>
+    var auth = firebase.auth(); 
+    var database = firebase.database(); 
+    var ref = database.ref('faculties');
+    var uid; 
+    auth.onAuthStateChanged(function(user){
+      if(!user){
+        window.location.href = "index.html";
+      }else{
+        var facRef = ref.child(user.uid+'/');
+        facRef.once('value',function(data){
+          var data = data.val(); 
+          
+          $('#fullname-display').text(data['fullname']); 
+          
+          $('#loading').fadeOut(); 
+          $('#wrapper').fadeIn(); 
+        });  
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div id="no-phone">
+    <h1 align="center"><img id="logo" src="style/images/templogo-w.png"></h1>
+    <h2 align="center">This website is not optimized for mobile phones, Please use a PC or a Laptop</h2>
+    <h4 align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quia ad, ullam, recusandae ipsam deserunt, libero placeat assumenda autem esse suscipit! Pariatur saepe totam commodi omnis facere ipsa eos numquam. Ipsum dolor sit amet, consectetur adipisicing elit. Sit fugit esse mollitia quasi optio veritatis magnam debitis rerum ipsam nisi iure vel fuga reprehenderit modi veniam quisquam, repudiandae aperiam cum.</hp>
+  </div>
+  
+  <img id="loading" src="style/images/loading.svg">
+  <div id="wrapper">
+    <!-- <img id="logo" src="style/images/templogo.png"> -->
+    <!-- <img id="dp" src="style/images/icons/default-user.png"> -->
+    <!--Shankar Balasubramanian-->
+    
+    <div id="select_sheet">
+      <select>
+      </select>
+    </div>
+    
+    <div id="header">
+      <div class="header-cont" id="left">
+        <img id="logo" src="style/images/templogo.png">
+      </div>
+      <div class="header-cont" id="right">
+        <div id="userInfo">
+          <h2 id="fullname-display">Rijin Mk</h2>
+          <input type="button" value="logout" class="logout-button">
+        </div>
+      </div>
+    </div>
+    
+    <div id="main-container">
+      <h2 id="generate-title" align="center"><a href="home.html"><img src="style/images/link-back.png"></a>GENERATE</h2>
+    
+      <div id="generate-holder">
+        <p id="generate-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam exercitationem, distinctio accusamus vero esse blanditiis repellat sapiente fuga asperiores placeat nemo, accusantium modi porro optio nobis suscipit minus consectetur reprehenderit.</p>
+        
+        <!--BRANCH AND SEM-->
+        <div id="generate-set-1">
+          <select id="branch-select">
+            <option value="branch">branch</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="electronics">Electronics</option>
+            <option value="ism">ISM</option>
+            <option value="civil">Civil</option>
+            <option value="mechatronics">Mechatronics</option>
+          </select>
+          
+          <select id="semester-select">
+            <option value="sem">semester</option>
+            <option value="1">1st</option>
+            <option value="2">2nd</option>
+            <option value="3">3rd</option>
+            <option value="4">4th</option>
+            <option value="5">5th</option>
+            <option value="6">6th</option>
+            <option value="7">7th</option>
+            <option value="8">8th</option>
+          </select>
+        </div>
+        
+        <!--Default settings-->
+        <div id="generate-set-2">
+          <h4>Are you following the <span style="color:#227ABC;">default settings</span>?</h4>
+          <!---Custom radio button-->
+          <div class="radio-btn-grp">
+            <input checked type="radio" id="default-settings-yes" name="default-settings" class="radio-ds">
+            <label for="default-settings">yup</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <input type="radio" id="default-settings-no" name="default-settings" class="radio-ds">
+            <label for="default-settings">nope</label>
+          </div>
+        </div>
+        
+        <!--ALL SETTINGS-->
+        <div id="generate-set-3">
+          <h4>Do you have courses enlisted in your file?</h4>
+          <div class="radio-btn-grp">
+            <input checked type="radio" id="courses-settings-yes" name="courses-settings" class="radio-ds">
+            <label for="courses-settings">yup</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <input type="radio" id="courses-settings-no" name="courses-settings" class="radio-ds">
+            <label for="courses-settings">nope</label>
+          </div>
+          
+          <div id="generate-set-3-1">
+            <h4 align=center>Please move the slider to change the default settings of each</h4>
+            <label id="range-courses-letters">Column letters where the <span class="highlightc">courses</span> reside: D to H</label>
+            <div id="slider-range-courses-letters"></div>
+            
+            <label id="range-courses-numbers">Row numbers where the <span class="highlightc">courses</span> reside: 30 to 40</label>
+            <div id="slider-range-courses-numbers"></div>
+          </div>
+          
+          <div id="generate-set-3-2">
+            <label id="range-students-letters">Column letters where the <span class="highlights">students</span> reside: A to E</label>
+            <div id="slider-range-students-letters"></div>
+            
+            <label id="range-students-numbers">Row numbers where the <span class="highlights">students</span> reside: 24 to 90</label>
+            <div id="slider-range-students-numbers"></div>
+          </div>
+        </div>
+        
+        <!--DRAG AND DROP EXCEL GOES HERE-->
+        <div id="generate-4">
+          <div ondragover="return false" id="dropzone"><h4>DRAG AND DROP <br> YOUR EXCEL FILE HERE<h4></div>
+          <div style="display:none;"><h4 align="center">OR</h4>
+          <div id="upload_pretend">UPLOAD</div>
+          <input type="file" id="upload_xl"></div>
+        </div>
+        
+      </div>
+        
+        <!--REMOVE THIS LATER-->
+        <div class="givespace"></div>
+        <div class="givespace"></div>
+        <div class="givespace"></div>
+        <!--REMOVE THIS LATER-->
+        
+      </div>
+    
+    </div>
+    
+  </div>
+</body>
+<script src="script/plugin/jquery-ui.min.js"></script>
+<script src="script/plugin/xlsx.full.min.js"></script>
+<script src="script/logout.js"></script>
+<script src="script/generate.js"></script>
+</html>

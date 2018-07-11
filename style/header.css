@@ -1,0 +1,60 @@
+#header{
+  width:80%;
+  height:80px;
+  /*border:1px solid #ccc;*/
+  position:relative;
+  margin-left:10%;
+  top:40px;
+}
+
+#header .header-cont{
+  position: relative;
+  display:inline-block;
+}
+
+#header #left{
+  width:50%;
+  height:80px;
+  /*background:red;*/
+}
+
+#header #left #logo{
+  width:150px;
+  position: absolute;
+  top:12px;
+  left:15px;
+}
+
+#header #right{
+  width:45%;
+  float: right;
+  height:80px;
+  /*background:green;*/
+}
+
+#header #right #userInfo{
+  /*border:1px solid #000;*/
+  position: absolute;
+  right:0px;
+  text-align: right;
+}
+
+#header #fullname-display{
+  position: relative;
+  top:10px;
+  font-weight:100;
+}
+
+#header .logout-button{
+  border:none;
+  background: #fff;
+  border:1px solid #ccc;
+  border-radius:3px;
+  position: relative;
+  top:19px;
+  font-size: 12px;
+  padding:7px;
+  cursor:pointer;
+  letter-spacing: 1px;
+  outline:none;
+}

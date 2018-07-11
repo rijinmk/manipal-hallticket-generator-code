@@ -1,0 +1,36 @@
+#wrapper{
+  display: none; 
+}
+
+#main-container .options{
+  border-radius: 8px;
+  display: inline-block;
+  width:200px;
+  height:200px;
+  text-align: center;
+  position: relative;
+  top:70px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background: #5A3662;
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0px 6px 0px #2A1C33;
+  transition:background 0.3s;
+}
+
+#main-container .options:hover{
+  background:#432C51;
+}
+
+#main-container .options img{
+  width:100px;
+  position: relative;
+  top:30px;
+}
+
+#main-container .options h4{
+  position: relative;
+  top:30px;
+  letter-spacing: 3px;
+}

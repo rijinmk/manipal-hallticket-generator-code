@@ -1,0 +1,26 @@
+3 modes: 
+1) Generate
+  Inputs: Department
+          Semester
+          Default Settings -> Yes / No 
+          Yes: Direct Drag and Drop 
+          No: Process
+              Course:
+                Column letters: A - B
+                Row numbers: 1 - 2
+              Students:
+                Column letters: A - B
+                Row numbers: 1 - 2
+              Excel File -> Data
+  Output: None
+2) Print
+  Inputs: Department
+          Branch 
+          Semester 
+  Output: Print format of the hallticket 
+3) Form
+  Inputs: <discuss>
+  Output: Thank you... etc. 
+  
+The generated excel files' cell data will be converted into JSON format and sent to the firebase database. From the firebase database it will 
+  

@@ -1,0 +1,83 @@
+#login-box{
+  width:250px;
+  height:350px;
+  border-radius:8px;
+  background:#fff;
+  position:absolute;
+  padding:30px;
+  top:50%;
+  left:50%;
+  margin-left: -155px; 
+  margin-top: -205px; 
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  z-index: -2;
+}
+
+#login-box h3{
+  font-size: 32pt;
+  font-weight: 100;
+}
+
+#login-box #login-inps-holder{
+  position: relative;
+  width:90%;
+  margin-left:5%;
+  top:40px;
+}
+
+#login-box #login-inp-holder{
+  position: relative;
+}
+
+#login-box label{
+  font-size: 10pt; 
+  letter-spacing: 1px;
+  position:relative;
+  top:32px;
+  left:10px;
+  padding:0px 5px 0px 5px;
+  background: #fff; 
+  z-index: -1;
+  
+  transition: top 0.3s;
+  transition-timing-function: cubic-bezier(1,-0.3,.05,1.18);
+}
+
+#login-box .login-inputs{
+  width:calc(100% - 20px);
+  padding:15px 10px 15px 10px;
+  font-size: 12px;
+  outline:none;
+  background: transparent; 
+  font-family: 'Quicksand', sans-serif;
+  border:none;
+  border:1px solid #ccc;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  color:#0071A7;
+}
+
+#login-box .login-button{
+  text-align: center;
+  position: relative;
+  top:20px;
+  font-size: 14px;
+  border:none;
+  letter-spacing: 1px;
+  color:#fff;
+  cursor: pointer;
+  background:#ccc;
+  width:calc(100% - 20px - 4px);
+  border:2px dashed #ccc;
+  
+  /*width:50px;
+  height:40px;
+  border-radius: 100%;*/
+  
+  transition:left 0.3s, width 0.3s, height 0.3s, border-radius 0.1s, border 0.3s, background 0.3s;
+}
+
+#login-box .login-button:hover{
+  background: #aaaaaa;
+  border:2px dashed #aaaaaa;
+}

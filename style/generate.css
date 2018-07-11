@@ -1,0 +1,257 @@
+#wrapper{
+  display: none; 
+}
+
+#generate-title{
+  position:relative;
+  top:25px;
+  letter-spacing: 4px;
+  font-weight:100;
+  font-size: 30px;
+}
+
+#generate-title img{
+  width:30px;
+  position: relative;
+  top: 5px;
+  left: -30px;
+  cursor: pointer;
+}
+
+#generate-holder{
+  width:80%;
+  text-align: left;
+  height:500px;
+  margin-left:10%;
+  position:relative;
+  top:50px;
+}
+
+#generate-holder #generate-intro{
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+#generate-holder #generate-set-1{
+  text-align: center;
+  position: relative;
+  top:20px;
+  padding-bottom:20px;
+  border-bottom:1px solid #eee;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  
+  border:none;
+  font-family: 'Quicksand', sans-serif;
+  padding:10px 5px 10px 5px;
+  font-size:15px;
+  width: 30%;
+  height: 38px;  
+  background:#fff;
+  background:url(images/select.png) no-repeat 95% center;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:5px;
+  outline:none;
+}
+
+#generate-holder #generate-set-1 #branch-select{
+  margin-right:10px;
+  width:calc(70% - 20px);
+}
+
+#generate-holder #generate-set-2{
+  position:relative;
+  top:40px;
+  display:none;
+}
+
+#generate-holder #generate-set-2 h4{
+  font-weight: 100;
+}
+
+.radio-btn-grp{
+  position:relative;
+  margin-top:6px;
+} 
+
+input[type=radio]{
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+   
+  display: inline-block;
+  margin-right:3px;
+    
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  border:1px solid #ccc;
+  outline:none;
+  position:relative;
+  top:5px;
+  
+  transition:background 0.4s;
+}
+
+input[type=radio]:checked{
+  background: #ccc;
+}
+
+#generate-holder #generate-set-3{
+  position:relative;
+  top:60px;
+  height:auto;
+  border-bottom:1px solid #eee;
+  display:none;
+  padding-bottom: 110px;
+}
+
+#generate-holder #generate-set-3 h4{
+  font-weight: 100;
+}
+
+#generate-holder #generate-set-3-1{
+  position:relative;
+  top:20px;
+  height:100px;
+}
+
+#generate-holder #generate-set-3-1 h4{
+  margin-bottom: 20px;
+  color:#2C594F;
+}
+
+.ui-widget-header{
+  background:#ccc !important;
+}
+
+#slider-range-courses-letters,
+#slider-range-students-letters
+{
+  position:relative;
+  top:10px;
+}
+
+#range-courses-numbers,
+#range-students-numbers
+{
+  position:relative;
+  top:26px;
+}
+
+#slider-range-courses-numbers,
+#slider-range-students-numbers
+{
+  position:relative;
+  top:35px;
+}
+
+.ui-slider-handle{
+  outline:none !important;
+  background: #fff !important; 
+  border-radius: 50% !important;
+}
+
+#generate-holder #generate-set-3-2{
+  position:relative;
+  top:70px;
+  height:100px;
+}
+
+.highlightc{
+  padding:4px;
+  background:#FFFB85;
+}
+
+.highlights{
+  padding:4px;
+  background:#FA5B75;
+  color:#fff;
+}
+
+.givespace{
+  width:200px;
+  height:200px;
+}
+
+#generate-4{
+  position:relative;
+  top:90px;
+  height:auto;
+  display:none;
+}
+
+#generate-4 #dropzone{
+  width:100%;
+  height:150px;
+  text-align: center;
+  
+  color:#fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+  background:#432C51;
+  
+  transition:background 0.3s;
+}
+
+#generate-4 #dropzone h4{
+  position:relative;
+  top:47px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+#generate-4 h4{
+  position:relative;
+  top:20px;
+}
+
+#upload_pretend{
+  position:relative;
+  margin-top:50px;
+  text-align: center;
+  padding:20px 0px 20px 0px;
+  letter-spacing: 2px;
+  width:50%;
+  margin-left:25%;
+  background: #FFD464;
+}
+
+#upload_xl{
+  width:50%;
+  padding:20px 0px 20px 0px;
+  width:50%;
+  margin-left:25%;
+  border:1px solid red;
+  position: relative;
+  top:-60px;
+  opacity:0;
+}
+
+#select_sheet{
+  width:300px;
+  height:100px;
+  position:fixed;
+  background: #DDD;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  margin-left:-150px;
+  margin-top:-50px;
+  border-radius:5px;
+  display:none;
+  box-shadow: 0px 8px 14px rgba(0,0,0,0.3);
+}
+
+#select_sheet select{
+  width:80%;
+  margin-left:10%;
+  position:relative;
+  top:30px;
+  background:#fff url(images/select.png) no-repeat 95% center;
+}

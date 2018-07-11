@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/home.css">
+  <link rel="stylesheet" href="style/header.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+  <title>Manipal Hallticket Generator</title>
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script src="script/plugin/jq.js"></script>
+  <script src="script/firebase-connect.js"></script>
+  <script>
+    var auth = firebase.auth(); 
+    var database = firebase.database(); 
+    var ref = database.ref('faculties');
+    var uid; 
+    auth.onAuthStateChanged(function(user){
+      if(!user){
+        window.location.href = "index.html";
+      }else{
+        var facRef = ref.child(user.uid+'/');
+        facRef.once('value',function(data){
+          var data = data.val(); 
+          
+          $('#fullname-display').text(data['fullname']); 
+          
+          $('#loading').fadeOut(); 
+          $('#wrapper').fadeIn(); 
+        });  
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div id="no-phone">
+    <h1 align="center"><img id="logo" src="style/images/templogo-w.png"></h1>
+    <h2 align="center">This website is not optimized for mobile phones, Please use a PC or a Laptop</h2>
+    <h4 align="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel quia ad, ullam, recusandae ipsam deserunt, libero placeat assumenda autem esse suscipit! Pariatur saepe totam commodi omnis facere ipsa eos numquam. Ipsum dolor sit amet, consectetur adipisicing elit. Sit fugit esse mollitia quasi optio veritatis magnam debitis rerum ipsam nisi iure vel fuga reprehenderit modi veniam quisquam, repudiandae aperiam cum.</hp>
+  </div>
+  
+  <img id="loading" src="style/images/loading.svg">
+  <div id="wrapper">
+    <!-- <img id="logo" src="style/images/templogo.png"> -->
+    <!-- <img id="dp" src="style/images/icons/default-user.png"> -->
+    <!--Shankar Balasubramanian-->
+    
+    <div id="header">
+      <div class="header-cont" id="left">
+        <img id="logo" src="style/images/templogo.png">
+      </div>
+      <div class="header-cont" id="right">
+        <div id="userInfo">
+          <h2 id="fullname-display">Rijin Mk</h2>
+          <input type="button" value="logout" class="logout-button">
+        </div>
+      </div>
+    </div>
+    
+    <div id="main-container">
+      <a href="generate.html"><div class="options">
+        <img src="style/images/icons/generate.svg">
+        <h4 align="center">generate</h4>
+      </div></a>
+      
+      <a href="print-build.html"><div class="options">
+        <img src="style/images/icons/print.svg">
+        <h4 align="center">print</h4>
+      </div></a>
+    </div>
+    
+  </div>
+</body>
+<script src="script/logout.js"></script>
+</html>

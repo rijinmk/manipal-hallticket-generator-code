@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0px;
+      padding:0px;
+    }
+    .print{
+      width:100px;
+      height:100px;
+      border:1px solid #000;
+    }
+    .print h1{
+      position:relative;
+      top:20px;
+    }
+    .print h2{
+      position:relative;
+      top:25px;
+    }
+    table{
+      border:1px solid #000;
+      position:relative;
+      top:40px;
+      width:60%;
+      margin-left:20%;
+    }
+    table td, table th{
+      border:1px solid #000;
+      padding:20px;
+    }
+    @media print{
+      .print{
+        width:21cm;
+        height:30cm;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="print">
+    <h1 align="center">MANIPAL HALLTICKET</h1>
+    <h2 align="center">Semester end examination</h2>
+    <table>
+      <tr>
+        <th>NAME</th>
+        <td>RIJIN MK</td>
+      </tr>
+      <tr>
+        <th>REG NO</th>
+        <td>1522020</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="print">
+    <h1 align="center">MANIPAL HALLTICKET</h1>
+    <h2 align="center">Semester end examination</h2>
+  </div>
+  
+  <div class="print">
+    <h1 align="center">MANIPAL HALLTICKET</h1>
+    <h2 align="center">Semester end examination</h2>
+  </div>
+</body>
+</html>

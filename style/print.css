@@ -1,0 +1,291 @@
+table
+{
+    border-collapse: collapse;
+}
+
+#wrapper{
+  display: none; 
+}
+
+#print-title{
+  position:relative;
+  top:25px;
+  letter-spacing: 4px;
+  font-weight:100;
+  font-size: 30px;
+}
+
+#print-title img{
+  width:30px;
+  position: relative;
+  top: 5px;
+  left: -30px;
+  cursor: pointer;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  
+  border:none;
+  font-family: 'Quicksand', sans-serif;
+  padding:10px 5px 10px 5px;
+  font-size:15px;
+  width: 30%;
+  height: 38px;  
+  background:#fff;
+  background:url(images/select.png) no-repeat 95% center;
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:5px;
+  outline:none;
+}
+
+#no-record{
+  position: relative;
+  top:30px;
+}
+
+#init-options{
+  position:relative;
+  top:35px;
+}
+
+#print-holder{
+  width:80%;
+  height:auto;
+  position:relative;
+  top:38px;
+  margin-left:10%;
+  
+  text-align: center;
+}
+
+.hallticket{
+  width:100%;
+  background: #fff;
+  padding:20px 0px 20px 0px;
+  page-break-after: always;
+  margin-bottom:-20px;
+  display: inline-block;
+}
+
+.hallticket .title{
+  letter-spacing: 2px;
+  position:relative; 
+}
+
+.hallticket .sub-title{
+  letter-spacing: 4px;
+  font-size: 16px;
+  opacity:1px;
+  position:relative;
+  padding-bottom:20px;
+  border-bottom: 1px solid #bbb;
+}
+
+.hallticket .exam-type{
+  letter-spacing: 4px;
+  font-size: 16px;
+  color:#999999;
+  position:relative;
+  top:15px;
+}
+
+.hallticket .exam-period{
+  letter-spacing: 6px;
+  font-size: 16px;
+  color:#999999;
+  position:relative;
+  top:23px;
+  padding-bottom:13px;
+  border-bottom: 1px solid #bbb;
+}
+
+.hallticket .hallticket-title{
+  letter-spacing: 6px;
+  font-size: 14px;
+  color:#999999;
+  position:relative;
+  top:40px;
+}
+
+.hallticket .student-info{
+  border:1px solid #bbb;
+  text-align: left;
+  width:100%;
+  position:relative;
+  top:0px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+.hallticket .student-info th{
+  border-right:1px solid #bbb;
+  text-align: left;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding:5px 0px 5px 10px;
+  margin:-2px;
+  font-size: 12px;
+}
+
+.hallticket .student-info td {
+  text-align: left;
+  padding:5px 0px 5px 10px;
+  margin:-2px;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.hallticket .rules{
+  position:relative;
+  top:80px;
+  text-align: left;
+  list-style:circle;
+}
+
+.hallticket .rules .title{
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  list-style:none;
+}
+
+.hallticket .rules li{
+  padding:7px 0px 7px 0px;
+  font-size: 13px;
+}
+
+.hallticket .rules .rules-info{
+  position:relative;
+  left:15px;
+}
+
+.hallticket .exam-info{
+  width:100%;
+  position:relative;
+  top:20px;
+}
+
+.hallticket .exam-info th{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding:5px;
+  font-size: 13px;
+}
+
+.hallticket .exam-info tr{
+  border:1px solid #bbb;
+  padding-bottom: 5px;
+}
+
+.hallticket .exam-info td{
+  letter-spacing: 1px;
+  padding:5px;
+  font-size: 13px;
+  margin-bottom: 4px;
+  border:1px solid #bbb;
+}
+
+.hallticket .exam-info .exam-time{
+  font-size:12px;
+  width:70px;
+}
+
+.hallticket .exam-info .exam-date{
+  font-size:12px;
+  width:70px;
+}
+
+.hallticket .exam-info .subject-code{
+  width:50px;
+}
+
+.hallticket .exam-info .inv-sign{
+  width:80px;
+  border-left:1px solid #ccc;
+}
+
+.hallticket .signs{
+  width:100%;
+  position:relative;
+  top:155px;
+  /*TESTING*/
+  position: absolute;
+  bottom: 15px;
+  left: 55px;
+  /*TESTING*/
+}
+
+.hallticket .signs th{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  padding-top:10px;
+  width :200px;
+}
+
+.hallticket .signs .signs-chairperson{
+  letter-spacing: 4px;
+  padding-top:10px;
+  border-top:1px solid #000;
+  width :200px;
+}
+
+.hallticket .signs .student{
+  padding-top:10px;
+  border-top:1px solid #000;
+  width :200px;
+  position: relative;
+  top: -8px;
+}
+
+.hallticket .signs .soeit{
+  font-size: 10px;
+}
+
+.only-on-print{
+  display:none;
+}
+
+@media print{
+  #no-phone, #header, #loading, #branch-select, #semester-select, #print-title{
+    display:none;
+  }
+  #main-container{
+    border:0px solid #fff;
+  }
+  .only-on-print{
+    display:block;
+  }
+  .hallticket{
+    margin-bottom:70px;
+    display: block;
+  }
+  .hallticket .student-info{
+    border:none;
+    border-top:1px solid #bbb;
+    border-bottom:1px solid #bbb;
+    position:relative;
+    top:60px;
+    box-shadow: none;
+  }
+  .hallticket .exam-info{
+    position:relative;
+    top:95px;
+  }
+
+  #print-holder{
+    width:100%;
+    height:auto;
+    position:relative;
+    margin-left:-10px;
+    top:-55px;
+  }
+  .hallticket{
+    width:160mm;
+    height:247mm;
+    border:1px solid #fff;
+  }
+}
